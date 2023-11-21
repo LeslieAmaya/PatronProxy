@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using PatronProxy.Proxies;
+
+APIProxy proxy = new APIProxy();
+proxy.UserName = "leslie";
+string result = proxy.Request("/home");
+Console.WriteLine(result);
